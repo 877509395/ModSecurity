@@ -118,6 +118,7 @@ ACTIONS = \
 	actions/capture.cc \
 	actions/chain.cc \
 	actions/ctl/audit_log_parts.cc \
+	actions/ctl/audit_engine.cc \
 	actions/ctl/rule_engine.cc \
 	actions/ctl/request_body_processor_json.cc \
 	actions/ctl/request_body_processor_xml.cc \
@@ -323,6 +324,7 @@ libmodsecurity_la_CPPFLAGS = \
 	$(YAJL_CFLAGS) \
 	$(LMDB_CFLAGS) \
 	$(PCRE_CFLAGS) \
+	$(PCRE2_CFLAGS) \
 	$(SSDEEP_CFLAGS) \
 	$(MAXMIND_CFLAGS) \
 	$(LUA_CFLAGS) \
@@ -338,6 +340,7 @@ libmodsecurity_la_LDFLAGS = \
 	$(LMDB_LDFLAGS) \
 	$(LUA_LDFLAGS) \
 	$(PCRE_LDFLAGS) \
+	$(PCRE2_LDFLAGS) \
 	$(SSDEEP_LDFLAGS) \
 	$(MAXMIND_LDFLAGS) \
 	$(YAJL_LDFLAGS) \
@@ -354,6 +357,7 @@ libmodsecurity_la_LIBADD = \
 	../others/libinjection.la \
 	../others/libmbedtls.la \
 	$(PCRE_LDADD) \
+	$(PCRE2_LDADD) \
 	$(MAXMIND_LDADD) \
 	$(SSDEEP_LDADD) \
 	$(YAJL_LDADD)
